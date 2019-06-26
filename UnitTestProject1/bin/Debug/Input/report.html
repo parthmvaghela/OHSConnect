@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	
+    <style type="text/css">
+        .Wrapper {
+            width: 620px;
+            border: 1px solid #CCCCCC;
+            padding: 10px 10px 10px 10px;
+            font-family: Calibri;
+            margin: 0 auto;
+        }
+
+        body {
+            color: black;
+            font-family: Calibri !important;
+        }
+
+        .Heading1 {
+            font-size: 28px;
+            background-color: #F2F2F2;
+        }
+
+            .Heading1 strong {
+                color: #FE6818;
+            }
+
+            .Heading1 span {
+                color: #666666;
+            }
+
+        .Heading2 {
+            font-size: 16px;
+            color: #540E68;
+            background-color: #F2F2F2;
+        }
+
+        .Heading3 {
+            color: #FFFFFF;
+            font-size: 18px;
+            background-color: #7369b5; /*F15627;*/
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .Content {
+            color: #999999;
+        }
+
+        .resetlink {
+            color: #7369b5;
+        }
+
+        .Ltd {
+            color: #999999;
+        }
+
+        .terms {
+            color: #7369b5;
+        }
+
+        .conditions {
+            color: #7369b5;
+        }
+
+        .contact {
+            color: #999999;
+        }
+
+        .mailto {
+        }
+
+            .mailto span {
+                color: #7369b5;
+            }
+
+        .email {
+            color: #7369b5;
+        }
+
+        a {
+            color: #7369b5;
+        }
+
+        .pop_tm {
+            width: 620px;
+            height: 8px;
+            border-bottom: 7px solid #534f43;
+        }
+
+        .subwrapper {
+            width: 620px;
+            padding: 0px;
+            font-family: Calibri;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Quiver</title>
+</head>
+<body>
+
+    
+    <table class="subwrapper">
+        <tr>
+            <td colspan="3">
+			<a href="https://www.tatvasoft.com"> 
+                <div style="height:60px; width:250px; padding:9px; background:url(https://www.tatvasoft.com/images/logo.png) no-repeat #2B4768"></div>
+                </a>
+                </td>
+        </tr>
+        <tr>
+            <td class="pop_tm">
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+    <table class="Wrapper">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td colspan="3" class="Content">
+                        
+                            <h3 style="color:#000000" align="center" id="reportHeader"> ${ReportHeader} </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td style="color:#000000" colspan="3" class="Content">
+                    		Daily automation report run completed on Workspace Automation Environment, please check attached File for detailed information about the automation run.
+                    	</td>
+                    
+                    </tr>
+                    
+                    <tr>
+                    	<td colspan="3" class="Content">
+                    	-----------------------------------------------------------------------------------------------------------------
+                    	</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#000000" class="Content"> Total Test Cases </td>
+                        <td style="color:#000000" class="Content"> ${TotalTestCases} </td>
+                    </tr>
+                    <tr>
+                        <td style="color:#000000" class="Content"> Passed Test Cases </td>
+                        <td style="color:#000000" class="Content"> ${PassedTestCases} </td>
+                    </tr>
+                    <tr>
+                        <td style="color:#000000" class="Content"> Failed Test Cases </td>
+                        <td style="color:#000000" class="Content"> ${FailedTestCases} </td>
+                    </tr>
+					<tr>
+                        <td style="color:#000000" class="Content"> Error Test Cases </td>
+                        <td style="color:#000000" class="Content"> ${ErrorTestCases} </td>
+                    </tr>
+                     <tr>
+                        <td style="color:#000000" class="Content"> Skipped Test Cases </td>
+                        <td style="color:#000000" class="Content"> ${SkippedTestCases} </td>
+                    </tr>
+                    
+                     <tr>
+                    	<td colspan="3" class="Content">
+                    	-----------------------------------------------------------------------------------------------------------------
+                    	</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+	
+</body>
+</html>

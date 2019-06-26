@@ -1,0 +1,111 @@
+
+Error Log : 12:24:39 PM Wednesday, June 26, 2019
+  :System.ArgumentNullException: Argument 'url' cannot be null.
+Parameter name: value
+   at OpenQA.Selenium.Remote.RemoteWebDriver.set_Url(String value)
+   at OHSConnect.CodeBindings.UserLoginSteps.GivenThatIamonOHSConnectWebsite() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 79
+-------------------------------
+
+Error Log : 12:37:27 PM Wednesday, June 26, 2019
+  :System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: unknown error: Element <button type="submit" class="btn btn-block2 btnPrimary mt-lg btnCustomPrimary" ng-disabled="loginLoading">...</button> is not clickable at point (959, 557). Other element would receive the click: <div data-preloader="" class="preloader">...</div>
+  (Session info: chrome=69.0.3497.81)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at OHSConnect.CodeBindings.UserLoginSteps.WhenIhaveenteredusernameandpassword() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 117
+-------------------------------
+
+Error Log : 12:39:12 PM Wednesday, June 26, 2019
+  :System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: unknown error: Element <button type="submit" class="btn btn-block2 btnPrimary mt-lg btnCustomPrimary" ng-disabled="loginLoading">...</button> is not clickable at point (959, 557). Other element would receive the click: <div data-preloader="" class="preloader">...</div>
+  (Session info: chrome=69.0.3497.81)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at OHSConnect.CodeBindings.UserLoginSteps.WhenIhaveenteredusernameandpassword() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 117
+-------------------------------
+
+Error Log : 12:42:12 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.Id: name_1_0_DateTimeofIncident
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at UnitTestProject1.AddIncidentFeatureSteps.WhenIFillTheIncidentReportAndSave() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\AddIncidentSteps.cs:line 57
+-------------------------------
+
+Error Log : 12:46:14 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.Id: account_username
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Clear()
+   at OHSConnect.CodeBindings.UserLoginSteps.WhenIhaveenteredusernameandpassword() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 108
+-------------------------------
+
+Error Log : 12:48:19 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=69.0.3497.81)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.GetScreenshot()
+   at OHSConnect.TestSuit.TakeScreenShot(String ScrShtSts) in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\TestSuit.cs:line 60
+-------------------------------
+
+Error Log : 12:49:12 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.Id: account_username
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Clear()
+   at OHSConnect.CodeBindings.UserLoginSteps.WhenIhaveenteredusernameandpassword() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 108
+-------------------------------
+
+Error Log : 12:49:22 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.WebDriverException: Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49960
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteTimeouts.ExecuteSetTimeout(String timeoutType, TimeSpan timeToWait)
+   at OpenQA.Selenium.Remote.RemoteTimeouts.set_ImplicitWait(TimeSpan value)
+   at OHSConnect.TestSuit.TakeScreenShot(String ScrShtSts) in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\TestSuit.cs:line 58
+-------------------------------
+
+Error Log : 12:50:09 PM Wednesday, June 26, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.Id: account_username
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Clear()
+   at OHSConnect.CodeBindings.UserLoginSteps.WhenIhaveenteredusernameandpassword() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 108
+-------------------------------
