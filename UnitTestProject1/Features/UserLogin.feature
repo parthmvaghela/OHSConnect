@@ -1,5 +1,5 @@
 ﻿Feature: UserLogin
-User wants to Login, select an account and then selects the system.
+User wants Login, select an account and then selects the system.
 
 @LoginTag
 Scenario: Login
