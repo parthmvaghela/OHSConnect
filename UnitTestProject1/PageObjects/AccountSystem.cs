@@ -10,7 +10,7 @@ namespace OHSConnect.PageObjects
             PageFactory.InitElements(webdriver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//h4[contains(text(),'Ishan Jun Testing (ISJUN)')]")]
+        [FindsBy(How = How.XPath, Using = "//h4[contains(text(),'Azure_21JUN2019_Test_Account (AZU98)')]")]
         [CacheLookup]
         public IWebElement SelectAccount { get; set; }
 

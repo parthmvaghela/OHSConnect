@@ -1,0 +1,26 @@
+
+Error Log : 10:06:16 AM Thursday, June 27, 2019
+  :OpenQA.Selenium.WebDriverException: A exception with a null response was thrown sending an HTTP request to the remote WebDriver server for URL http://localhost:55853/session/c7f541676d23c216ba825b7593295a39/screenshot. The status of the exception was ConnectFailure, and the message was: Unable to connect to the remote server ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:55853
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.GetScreenshot()
+   at OHSConnect.TestSuit.TakeScreenShot(String ScrShtSts) in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\TestSuit.cs:line 59
+-------------------------------
+
+Error Log : 10:41:53 AM Thursday, June 27, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //div[contains(text(),'Black, Robert')]
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at UnitTestProject1.AddIncidentFeatureSteps.WhenIFillTheIncidentReportAndSave() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\AddIncidentSteps.cs:line 103
+-------------------------------

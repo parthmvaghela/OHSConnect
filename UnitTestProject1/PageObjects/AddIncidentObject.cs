@@ -14,7 +14,7 @@ namespace OHSConnect.PageObjects
         [CacheLookup]
         public IWebElement AddMenu { get; set; }
 
-        [FindsBy(How = How.XPath, Using = @"//*[@id=""1_0""]/a")]
+        [FindsBy(How = How.XPath, Using = @"//a[contains(text(),'Add an Incident')]")]
         [CacheLookup]
         public IWebElement AddanIncidentMenu { get; set; }
 
@@ -30,7 +30,7 @@ namespace OHSConnect.PageObjects
         [CacheLookup]
         public IWebElement BusinessUnitDrpDwn { get; set; }
 
-        [FindsBy(How = How.XPath, Using = @"//*[@id=""orignalDiv20""]/div/div[2]/div/div/div/multi-select-tree/div/div[2]/ul/tree-item[1]/li/div/div[2]/div/label")]
+        [FindsBy(How = How.XPath, Using = @"(//label[contains(text(),'Unassigned')])[1]")]
         [CacheLookup]
         public IWebElement IshanTestOption { get; set; }
 
@@ -98,7 +98,7 @@ namespace OHSConnect.PageObjects
         [CacheLookup]
         public IWebElement ReportedByDrpDwn { get; set; }
 
-        [FindsBy(How = How.XPath, Using = @"//div[contains(text(),'Black, Robert')]")]
+        [FindsBy(How = How.XPath, Using = @"//div[contains(text(),'AZU98 User, Portal')]")]
         [CacheLookup]
         public IWebElement ReportedByDrpDwnOption { get; set; }        
 
@@ -106,7 +106,7 @@ namespace OHSConnect.PageObjects
         [CacheLookup]
         public IWebElement CompletedByDrpDwn { get; set; }
 
-        [FindsBy(How = How.XPath, Using = @"(//div[contains(text(),'Black')])[2]")]
+        [FindsBy(How = How.XPath, Using = @"//span[contains(text(),'AZU98-PER-3')]")]
         [CacheLookup]
         public IWebElement CompletedByDrpDwnoption { get; set; }
 

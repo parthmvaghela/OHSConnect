@@ -47,7 +47,7 @@
       <HintPath>..\..\..\Harmonix Parth\Harmonix\Workspace_Verify\bin\Debug\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="ExcelReport">
-      <HintPath>C:\Users\pct49\Desktop\ExcelReport.dll</HintPath>
+      <HintPath>..\..\..\SpecFlow\ExcelReport.dll</HintPath>
     </Reference>
     <Reference Include="ExtentReports, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ExtentReports.4.0.3\lib\ExtentReports.dll</HintPath>
