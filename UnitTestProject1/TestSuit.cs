@@ -7,6 +7,10 @@ using OHSConnect.PageObjects;
 using System;
 using System.Threading;
 using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Firefox;
 
 namespace OHSConnect
 {
@@ -15,6 +19,9 @@ namespace OHSConnect
         public static IWebDriver webdriver;
 
         public static int pass = 0, fail = 0, skip = 0, error = 0;
+
+        //Variable to check dependency of test cases and skip them
+        public static bool DemoSkip = false;
 
         public static ExcelReport.ReadData Readdata = new ExcelReport.ReadData();
 
@@ -49,6 +56,87 @@ namespace OHSConnect
             }
             
         }
+
+        public static void OpenBrowser()
+        {
+            string browValue = Readdata.ProcessOnCollection(LoginCollection, "Browser");
+            SystemOsversion = System.Environment.OSVersion.ToString();
+            SystemMachineName = System.Environment.MachineName;
+            if (browValue != null)
+            {
+                switch (browValue)//BrowserName, BrowserVersion, BrowserPlatForm, SystemMachineName
+                {
+
+                    case "Chrome":
+                        webdriver = new ChromeDriver(Driverpath);
+                        ICapabilities Chcapabilities = ((RemoteWebDriver)webdriver).Capabilities;
+                        BrowserName = Chcapabilities.BrowserName;
+                        BrowserVersion = Chcapabilities.Version;
+                        BrowserPlatForm = Chcapabilities.Platform.ToString();
+
+                        ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
+                        ExtentReport.PrintExtentReport(LogStatus.Pass, "\"Google Chrome Browser\" Opened", "Pass");
+
+                        TakeScreenShot("Pass");
+                        break;
+
+                    case "IE":
+                        var optionsIE = new InternetExplorerOptions();
+                        optionsIE.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+                        webdriver = new InternetExplorerDriver(Driverpath, optionsIE);
+                        ICapabilities IEcapabilities = ((RemoteWebDriver)webdriver).Capabilities;
+                        BrowserName = IEcapabilities.BrowserName;
+                        BrowserVersion = IEcapabilities.Version;
+                        BrowserPlatForm = IEcapabilities.Platform.ToString();
+
+                        ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
+                        ExtentReport.PrintExtentReport(LogStatus.Pass, "\"Internet Explorer Browser\" Opened", "Pass");
+
+                        TestSuit.TakeScreenShot("Pass");
+                        break;
+                    case "Firefox":
+                        FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(TestSuit.Driverpath);
+                        webdriver = new FirefoxDriver(service);
+                        ICapabilities FFcapabilities = ((RemoteWebDriver)webdriver).Capabilities;
+                        BrowserName = FFcapabilities.BrowserName;
+                        BrowserVersion = FFcapabilities.Version;
+                        BrowserPlatForm = FFcapabilities.Platform.ToString();
+
+                        ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
+                        ExtentReport.PrintExtentReport(LogStatus.Pass, "\"Mozilla Firefox Browser\" Opened", "Pass");
+
+                        TakeScreenShot("Pass");
+                        break;
+                }
+            }
+        }
+
+        public static void OpenURL()
+        {
+            try
+            {
+                webdriver.Url = Readdata.ProcessOnCollection(LoginCollection, "URL");
+                if (webdriver.Url != null)
+                {
+                    webdriver.Url = Readdata.ProcessOnCollection(LoginCollection, "URL");
+                    webdriver.Manage().Window.Maximize();
+
+                    Thread.Sleep(12000);
+
+                    TakeScreenShot("Pass");
+                }
+            }
+            catch (Exception Ex)
+            {
+                logger.WriteLog(Ex);
+                ExtentReport.EndReport();
+                SendEmail.email_send(ExtentReport.reportPath, logger.ErrorLogFilePath, SystemMachineName, MailCollection, ProjectName);
+                webdriver.Quit();
+                DemoSkip = true;
+            }
+        }
+
+
 
         public static void TakeScreenShot(string ScrShtSts)
         {

@@ -1,0 +1,20 @@
+
+Error Log : 12:00:15 PM Friday, June 28, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //h4[contains(text(),'Azure_21JUN2019_Test_Account (AZU98)')]
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at OHSConnect.CodeBindings.UserLoginSteps.GivenIHaveSelectedAnAccount() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 176
+-------------------------------
+
+Error Log : 12:04:39 PM Friday, June 28, 2019
+  :OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //h4[contains(text(),'Azure_21JUN2019_Test_Account (AZU98)')]
+   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at OHSConnect.CodeBindings.UserLoginSteps.GivenIHaveSelectedAnAccount() in D:\Parth Vaghela\Projects\UnitTestProject1\UnitTestProject1\CodeBindings\UserLoginSteps.cs:line 176
+-------------------------------

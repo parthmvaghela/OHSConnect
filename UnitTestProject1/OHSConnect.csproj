@@ -161,15 +161,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CodeBindings\AddIncidentSteps.cs" />
+    <Compile Include="CodeBindings\WAddIncidentSteps.cs" />
     <Compile Include="CodeBindings\UserLoginSteps.cs" />
     <Compile Include="Common\ExtentReport.cs" />
     <Compile Include="Common\logger.cs" />
     <Compile Include="Common\SendEmail.cs" />
-    <Compile Include="Features\AddIncidentFeature.feature.cs">
+    <Compile Include="Features\WAddIncidentFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AddIncidentFeature.feature</DependentUpon>
+      <DependentUpon>WAddIncidentFeature.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\UserLogin.feature.cs">
       <AutoGen>True</AutoGen>
@@ -186,9 +186,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\AddIncidentFeature.feature">
+    <None Include="Features\WAddIncidentFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>AddIncidentFeature.feature.cs</LastGenOutput>
+      <LastGenOutput>WAddIncidentFeature1.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\UserLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

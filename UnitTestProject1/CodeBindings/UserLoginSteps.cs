@@ -26,62 +26,11 @@ namespace OHSConnect.CodeBindings
             {
                 ExtentReport ExRepo = new ExtentReport();
 
-                string browValue = TestSuit.Readdata.ProcessOnCollection(TestSuit.LoginCollection, "Browser");
-                TestSuit.SystemOsversion = System.Environment.OSVersion.ToString();
-                TestSuit.SystemMachineName = System.Environment.MachineName;
-                if (browValue != null)
-                {
-                    switch (browValue)//BrowserName, BrowserVersion, BrowserPlatForm, SystemMachineName
-                    {
+                //Open Browser
+                TestSuit.OpenBrowser();
 
-                        case "Chrome":
-                            TestSuit.webdriver = new ChromeDriver(TestSuit.Driverpath);
-                            ICapabilities Chcapabilities = ((RemoteWebDriver)TestSuit.webdriver).Capabilities;
-                            TestSuit.BrowserName = Chcapabilities.BrowserName;
-                            TestSuit.BrowserVersion = Chcapabilities.Version;
-                            TestSuit.BrowserPlatForm = Chcapabilities.Platform.ToString();
-
-                            ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
-                            ExtentReport.PrintExtentReport(LogStatus.Pass,"\"Google Chrome Browser\" Opened", "Pass");
-
-                            TestSuit.TakeScreenShot("Pass");
-                            break;
-
-                        case "IE":
-                            var optionsIE = new InternetExplorerOptions();
-                            optionsIE.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
-                            TestSuit.webdriver = new InternetExplorerDriver(TestSuit.Driverpath, optionsIE);
-                            ICapabilities IEcapabilities = ((RemoteWebDriver)TestSuit.webdriver).Capabilities;
-                            TestSuit.BrowserName = IEcapabilities.BrowserName;
-                            TestSuit.BrowserVersion = IEcapabilities.Version;
-                            TestSuit.BrowserPlatForm = IEcapabilities.Platform.ToString();
-
-                            ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
-                            ExtentReport.PrintExtentReport(LogStatus.Pass, "\"Internet Explorer Browser\" Opened", "Pass");
-
-                            TestSuit.TakeScreenShot("Pass");
-                            break;
-                        case "Firefox":
-                            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(TestSuit.Driverpath);
-                            TestSuit.webdriver = new FirefoxDriver(service);
-                            ICapabilities FFcapabilities = ((RemoteWebDriver)TestSuit.webdriver).Capabilities;
-                            TestSuit.BrowserName = FFcapabilities.BrowserName;
-                            TestSuit.BrowserVersion = FFcapabilities.Version;
-                            TestSuit.BrowserPlatForm = FFcapabilities.Platform.ToString();
-
-                            ExtentReport.test = ExtentReport.extent.StartTest("OHS Connect Login");
-                            ExtentReport.PrintExtentReport(LogStatus.Pass, "\"Mozilla Firefox Browser\" Opened", "Pass");
-
-                            TestSuit.TakeScreenShot("Pass");
-                            break;
-                    }
-                }
-                TestSuit.webdriver.Url = TestSuit.Readdata.ProcessOnCollection(TestSuit.LoginCollection, "URL");
-                TestSuit.webdriver.Manage().Window.Maximize();
-
-                Thread.Sleep(12000);
-
-                TestSuit.TakeScreenShot("Pass");
+                //Open Website
+                TestSuit.OpenURL();
 
                 LoginObject = new LoginPage(TestSuit.webdriver);
                 ExtentReport.PrintExtentReport(LogStatus.Pass, "OHS Connect Website Open", "Pass");
